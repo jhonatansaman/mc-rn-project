@@ -1,20 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from "@react-navigation/native";
+import { QueryClient, QueryClientProvider } from "react-query";
+import useFont from "src/hooks/useFont";
+import GlobalStyle from "src/styles/globals";
+import theme from "src/styles/theme";
+import { ThemeProvider } from "styled-components";
+import Routes from "./src";
+
+const queryClient = new QueryClient();
 
 export default function App() {
+  const isFontLoaded = useFont();
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <ThemeProvider theme={theme}>
+        <QueryClientProvider client={queryClient}>
+          {isFontLoaded && <Routes />}
+        </QueryClientProvider>
+      </ThemeProvider>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
