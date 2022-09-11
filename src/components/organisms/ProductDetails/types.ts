@@ -6,8 +6,6 @@ export interface Product {
 }
 
 export interface IProductDetails {
-  isShownProductModal: boolean;
-  onDismissModal: () => void;
   productSelected: Product | null;
 }
 

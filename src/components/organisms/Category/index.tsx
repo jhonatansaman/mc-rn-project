@@ -1,16 +1,20 @@
-import { Button, FlatList } from "react-native";
+import { FlatList } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
-import Card from "src/components/atoms/Card";
+import Card from "src/components/organisms/Card";
 import Heading from "src/components/atoms/Heading";
+import { toReturnCardID } from "src/utils/card";
 import { Product } from "../ProductDetails/types";
 import * as S from "./styles";
 import { ICategory, RenderItem } from "./types";
 
 const renderItem =
   (onSelectProduct: (param: Product) => void) =>
-  ({ item }: RenderItem) =>
+  ({ item, index }: RenderItem) =>
     (
-      <TouchableOpacity onPress={() => onSelectProduct(item)}>
+      <TouchableOpacity
+        testID={toReturnCardID(item.name, index)}
+        onPress={() => onSelectProduct(item)}
+      >
         <Card
           key={item.url}
           url={item.url}

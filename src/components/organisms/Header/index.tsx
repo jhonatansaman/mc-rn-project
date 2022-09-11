@@ -2,9 +2,9 @@ import * as S from "./styles";
 import Logo from "src/assets/images/logo.png";
 import { IHeader } from "./types";
 
-const Header = ({ isOpacity }: IHeader) => {
+const Header = () => {
   return (
-    <S.Container opacityBackground={isOpacity}>
+    <S.Container>
       <S.Logo source={Logo} />
     </S.Container>
   );

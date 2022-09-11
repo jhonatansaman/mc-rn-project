@@ -6,5 +6,5 @@ export const Text = styled.Text`
   font-weight: 700;
   font-size: 36px;
   letter-spacing: -0.01em;
-  color: #000;
+  color: ${(props) => props.theme?.colors?.primary};
 `;

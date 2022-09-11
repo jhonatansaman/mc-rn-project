@@ -8,6 +8,7 @@ const Modal = ({ children, isOpen, onDismiss }: IModal) => {
       transparent={true}
       visible={isOpen}
       onRequestClose={onDismiss}
+      testID="modal"
     >
       {children}
     </ModalRN>

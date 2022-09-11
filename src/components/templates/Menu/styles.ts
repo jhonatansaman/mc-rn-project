@@ -1,10 +1,8 @@
 import styled, { css } from "styled-components/native";
 
-export const Container = styled.View<{ opacityBackground: boolean }>`
-  ${({ opacityBackground, theme }) => css`
-    background-color: ${opacityBackground
-      ? "rgba(0, 0, 0, 0.3)"
-      : theme.colors.secondary};
+export const Container = styled.View`
+  ${({ theme }) => css`
+    background-color: ${theme.colors?.secondary};
     flex: 1;
   `}
 `;

@@ -1,11 +1,11 @@
+import CardContent from "src/components/molecules/CardContent";
 import * as S from "./styles";
 import { ICard } from "./types";
 
 const Card = ({ name, url }: ICard) => {
   return (
     <S.Container>
-      <S.Image source={{ uri: url }} />
-      <S.Description>{name}</S.Description>
+      <CardContent name={name} uri={url} />
     </S.Container>
   );
 };

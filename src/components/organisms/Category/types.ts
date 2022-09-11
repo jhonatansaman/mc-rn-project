@@ -1,4 +1,4 @@
-import { Product } from "src/components/molecules/Products/types";
+import { Product } from "../ProductDetails/types";
 
 export interface ICategory {
   name: string;
@@ -8,4 +8,5 @@ export interface ICategory {
 
 export type RenderItem = {
   item: Product;
+  index: number;
 };
