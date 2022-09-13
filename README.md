@@ -25,7 +25,7 @@ Go to the project folder:
 cd mc-rn-project
 ```
 
-Install the depedencies:
+Install the dependencies:
 
 ```sh
 yarn
