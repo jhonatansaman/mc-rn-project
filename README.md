@@ -7,7 +7,7 @@
 <img alt="Figma" src="https://img.shields.io/badge/figma%20-%23F24E1E.svg?&style=for-the-badge&logo=figma&logoColor=white"/>
 </p>
 
-## Sobre 📖
+## About 📖
 
 Trio.dev remote take-home project.
 
@@ -25,7 +25,7 @@ Go to the project folder:
 cd mc-rn-project
 ```
 
-Instale as dependencias:
+Install the depedencies:
 
 ```sh
 yarn
